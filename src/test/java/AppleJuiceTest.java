@@ -1,4 +1,5 @@
 import juiceBar.AppleJuice;
+import juiceBar.JuiceType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -10,12 +11,12 @@ public class AppleJuiceTest {
 
     @Before
     public void before() {
-        appleJuice = new AppleJuice("Apple Juice", 5, 7);
+        appleJuice = new AppleJuice("Apple Juice", 5, 7, JuiceType.APPLE);
     }
 
     @Test
     public void hasType() {
-        assertEquals("Apple Juice", appleJuice.getType());
+        assertEquals(JuiceType.APPLE, appleJuice.getType());
     }
 
     @Test
@@ -31,5 +32,11 @@ public class AppleJuiceTest {
     @Test
     public void haveProfit() {
         assertEquals(2, appleJuice.calculateMarkup());
+    }
+
+    @Test
+    public void canUpgrade() {
+        appleJuice.upgradeDrink();
+        assertEquals(42, appleJuice.calculateMarkup());
     }
 }

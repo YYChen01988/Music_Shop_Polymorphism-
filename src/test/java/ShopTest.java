@@ -2,6 +2,7 @@ import instruments.Guitar;
 import instruments.InstrumentType;
 import juiceBar.AppleJuice;
 import juiceBar.ISell;
+import juiceBar.JuiceType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,7 @@ public class ShopTest {
     @Before
     public void before() {
         shop = new Shop();
-        appleJuice = new AppleJuice("Apple Juice", 5, 7);
+        appleJuice = new AppleJuice("Apple Juice", 5, 7, JuiceType.APPLE);
         guitar = new Guitar("Wood","Black",200, 450, 6, InstrumentType.GUITAR);
     }
 
