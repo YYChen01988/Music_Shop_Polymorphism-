@@ -3,9 +3,19 @@ package instruments;
 public class Guitar extends Instrument{
 
     private int stringNumber;
-    public Guitar(String material, String color, String type) {
-        super(material, color, type);
+    private InstrumentType type;
 
+    public Guitar(String material, String color, int boughtPrice, int sellPrice, int stringNumber, InstrumentType type) {
+        super(material, color, boughtPrice, sellPrice);
         this.stringNumber = stringNumber;
+        this.type = InstrumentType.GUITAR;
+    }
+
+    public int getStringNumber() {
+        return stringNumber;
+    }
+
+    public InstrumentType getType() {
+        return type;
     }
 }

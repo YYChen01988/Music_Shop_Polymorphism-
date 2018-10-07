@@ -1,7 +1,15 @@
 package instruments;
 
 public class Piano extends Instrument {
-    public Piano(String material, String color, String type) {
-        super(material, color, type);
+
+    private InstrumentType type;
+
+    public Piano(String material, String color, int boughtPrice, int sellPrice, InstrumentType type) {
+        super(material, color, boughtPrice, sellPrice);
+        this.type = InstrumentType.PIANO;
+    }
+
+    public InstrumentType getType() {
+        return type;
     }
 }

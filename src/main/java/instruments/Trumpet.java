@@ -3,8 +3,19 @@ package instruments;
 public class Trumpet extends Instrument {
 
     private int valvesNumber;
-    public Trumpet(String material, String color, String type) {
-        super(material, color, type);
+    private InstrumentType type;
+
+    public Trumpet(String material, String color, int boughtPrice, int sellPrice, int valvesNumber, InstrumentType type) {
+        super(material, color, boughtPrice, sellPrice);
         this.valvesNumber = valvesNumber;
+        this.type = type;
+    }
+
+    public int getValvesNumber() {
+        return valvesNumber;
+    }
+
+    public InstrumentType getType() {
+        return type;
     }
 }
