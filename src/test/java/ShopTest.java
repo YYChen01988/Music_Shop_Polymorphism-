@@ -11,13 +11,14 @@ public class ShopTest {
 
     Shop shop;
     AppleJuice appleJuice;
-    Guitar guitar;
+    Guitar guitar, guitar1;
 
     @Before
     public void before() {
         shop = new Shop();
         appleJuice = new AppleJuice("Apple Juice", 5, 7, JuiceType.APPLE);
         guitar = new Guitar("Wood","Black",200, 450, 6, InstrumentType.GUITAR);
+        guitar1 = new Guitar("Oak Wood","Brown",200, 450, 6, InstrumentType.GUITAR);
     }
 
     @Test
@@ -43,7 +44,29 @@ public class ShopTest {
         shop.addItem(appleJuice);
         shop.addItem(appleJuice);
         shop.addItem(guitar);
-        shop.addItem(guitar);
+        shop.addItem(guitar1);
         assertEquals(504, shop.potentialProfit());
+    }
+
+    @Test
+    public void hasSoldItemsProfit() {
+        shop.addItem(appleJuice);
+        shop.addItem(appleJuice);
+        shop.addItem(guitar);
+        shop.addItem(guitar1);
+        shop.sellItem(guitar);
+        shop.sellItem(guitar1);
+        assertEquals(500, shop.profit());
+    }
+
+    @Test
+    public void canCheckIfMeetTarget() {
+        shop.addItem(appleJuice);
+        shop.addItem(appleJuice);
+        shop.addItem(guitar);
+        shop.addItem(guitar1);
+        shop.sellItem(guitar);
+        shop.sellItem(guitar1);
+        assertEquals("Wonderful, You meet the target", shop.meetTarget());
     }
 }
