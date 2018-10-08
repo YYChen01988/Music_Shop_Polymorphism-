@@ -1,6 +1,7 @@
 package instruments;
 
-import juiceBar.ISell;
+import behaviour.IPlay;
+import behaviour.ISell;
 
 public abstract class Instrument implements IPlay, ISell {
 

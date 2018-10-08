@@ -1,13 +1,9 @@
 import instruments.Guitar;
 import instruments.InstrumentType;
 import juiceBar.AppleJuice;
-import juiceBar.ISell;
 import juiceBar.JuiceType;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.sql.Array;
-import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 

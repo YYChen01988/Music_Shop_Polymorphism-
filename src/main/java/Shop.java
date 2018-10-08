@@ -1,6 +1,4 @@
-import instruments.Guitar;
-import juiceBar.AppleJuice;
-import juiceBar.ISell;
+import behaviour.ISell;
 
 import java.util.ArrayList;
 

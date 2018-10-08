@@ -1,5 +1,8 @@
 package juiceBar;
 
+import behaviour.ISell;
+import behaviour.Upgradable;
+
 public class Juice implements ISell, Upgradable {
 //    private String type;
     private  int boughtPrice;
